@@ -8,7 +8,7 @@ player. Let's build something amazing together!🚀`;
 let greetingsArray = [...greetings];
 let index = 0;
 
-// add characters to the left of cursor span every 0.2s
+// add characters to the left of cursor span every 0.5s
 let typing = setInterval(function () {
   cursor.append(greetingsArray[index]);
   if (index < greetingsArray.length - 1) {
