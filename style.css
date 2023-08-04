@@ -47,7 +47,9 @@ header {
 }
 
 .nav-links:hover,
-.social a:hover {
+.social a:hover,
+.nav-links:active,
+.social a:active {
   transform: scale(1.1);
   background-color: lightblue;
   padding: 10px;
@@ -80,7 +82,8 @@ header {
   transition: all 0.5s;
 }
 
-.social:hover {
+.social:hover,
+.social:active {
   transform: translate(-50px, 0px);
 }
 
@@ -98,7 +101,8 @@ header {
   transition: transform 0.5s;
 }
 
-.left-arrow:hover {
+.left-arrow:hover,
+.left-arrow:active {
   transform: scale(1.2);
 }
 
