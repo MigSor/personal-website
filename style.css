@@ -4,12 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 #main {
   width: 100vw;
   position: relative;
-  background-color: rgb(224, 221, 221);
+
+  /* background-color: rgb(224, 221, 221); */
   /* background: linear-gradient(90deg, lightblue, rgb(124, 189, 253)); */
   padding: 0 20px;
   font-family: "Special Elite", Arial, Helvetica, sans-serif;
@@ -18,13 +20,41 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background: white;
+  animation-name: backgroundChange;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
-#top {
+@keyframes backgroundChange {
+  from {
+    background: white;
+  }
+  to {
+    background: rgb(224, 221, 221);
+  }
+}
+
+.top {
   display: flex;
-  height: 965px;
+  height: 970px;
   width: 100%;
   position: relative;
+}
+.mid-section {
+  transition: 2s;
+  display: none;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+section.show {
+  /* translate: 0px -100vw; */
+  display: block;
+}
+
+section.hide {
+  display: none;
 }
 
 header {
@@ -36,7 +66,7 @@ header {
   /* outline: 1px solid red; */
 }
 
-#intro {
+.intro {
   width: 65%;
 }
 
@@ -57,7 +87,7 @@ header {
   cursor: pointer;
 }
 
-#intro {
+.intro {
   display: flex;
   align-items: center;
 }
@@ -110,4 +140,37 @@ header {
   height: 50px;
   width: 50px;
   border-right: 2px solid rgb(183, 219, 231);
+}
+
+.mid-section {
+  width: 65%;
+  position: relative;
+  /* top: 35%; */
+  right: 0;
+  flex-direction: column;
+  animation-name: change;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.article-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 50px;
+}
+
+.article {
+  display: flex;
+  gap: 30px;
 }
