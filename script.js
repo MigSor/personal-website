@@ -20,13 +20,12 @@ let typing = setInterval(function () {
 }, 50);
 
 skillsBtn.addEventListener("click", function () {
-  introSection.classList.toggle("hide");
-  midSection.classList.toggle("hide");
-  midSection.classList.toggle("show");
+  introSection.classList.add("hide");
+  midSection.classList.remove("hide");
+  midSection.classList.add("show");
 });
 
 introBtn.addEventListener("click", function () {
-  introSection.classList.toggle("hide");
-  midSection.classList.toggle("hide");
-  midSection.classList.toggle("show");
+  introSection.classList.remove("hide");
+  midSection.classList.add("hide");
 });
